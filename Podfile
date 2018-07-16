@@ -6,6 +6,7 @@ target 'RxDemo' do
   use_frameworks!
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'RxDataSources', '~> 3.0'
     pod 'Alamofire', '~> 4.7'
     pod 'Moya/RxSwift', '~> 11.0'
     pod 'Swinject'

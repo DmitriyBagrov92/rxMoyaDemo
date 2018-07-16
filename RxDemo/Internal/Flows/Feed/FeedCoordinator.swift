@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Swinject
 import UIKit
+import Moya
 
 class FeedCoordinator: CoordinatorProtocol {
 
@@ -20,7 +21,8 @@ class FeedCoordinator: CoordinatorProtocol {
         let nvc = UIStoryboard(name: FeedViewController.identifier, bundle: nil).instantiateInitialViewController() as! UINavigationController
         let vc = nvc.topViewController as? FeedViewController
 
-        let feedViewModel = FeedViewModel()
+        //TODO: Add Provider to DI container
+        let feedViewModel = FeedViewModel(provider: MoyaProvider<OlimpBattle>())
         vc?.viewModel = feedViewModel
 
         viewController.present(nvc, animated: true, completion: nil)

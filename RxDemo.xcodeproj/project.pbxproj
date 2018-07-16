@@ -26,6 +26,14 @@
 		F2E020EA20FCA7F2008B3D37 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */; };
 		F2E020EC20FCA823008B3D37 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020EB20FCA823008B3D37 /* FeedCoordinator.swift */; };
 		F2E020EE20FCA990008B3D37 /* Enum+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */; };
+		F2E020F320FCB0CF008B3D37 /* OlimpTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E020F220FCB0CF008B3D37 /* OlimpTableViewController.storyboard */; };
+		F2E020F520FCB0EE008B3D37 /* OlimpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020F420FCB0EE008B3D37 /* OlimpTableViewController.swift */; };
+		F2E020F720FCB103008B3D37 /* OlimpTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020F620FCB103008B3D37 /* OlimpTableViewModel.swift */; };
+		F2E020F920FCB231008B3D37 /* OlimpBattleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020F820FCB231008B3D37 /* OlimpBattleItem.swift */; };
+		F2E020FC20FCB682008B3D37 /* DisposableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020FB20FCB681008B3D37 /* DisposableTableViewCell.swift */; };
+		F2E0210020FCB851008B3D37 /* OlimpTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020FF20FCB851008B3D37 /* OlimpTableCellViewModel.swift */; };
+		F2E0210220FCB89F008B3D37 /* OlimpLeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0210120FCB89F008B3D37 /* OlimpLeftTableViewCell.swift */; };
+		F2E0210420FCB8C6008B3D37 /* OlimpRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E0210320FCB8C6008B3D37 /* OlimpRightTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +58,14 @@
 		F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F2E020EB20FCA823008B3D37 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enum+Collection.swift"; sourceTree = "<group>"; };
+		F2E020F220FCB0CF008B3D37 /* OlimpTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OlimpTableViewController.storyboard; sourceTree = "<group>"; };
+		F2E020F420FCB0EE008B3D37 /* OlimpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpTableViewController.swift; sourceTree = "<group>"; };
+		F2E020F620FCB103008B3D37 /* OlimpTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpTableViewModel.swift; sourceTree = "<group>"; };
+		F2E020F820FCB231008B3D37 /* OlimpBattleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpBattleItem.swift; sourceTree = "<group>"; };
+		F2E020FB20FCB681008B3D37 /* DisposableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposableTableViewCell.swift; sourceTree = "<group>"; };
+		F2E020FF20FCB851008B3D37 /* OlimpTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpTableCellViewModel.swift; sourceTree = "<group>"; };
+		F2E0210120FCB89F008B3D37 /* OlimpLeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpLeftTableViewCell.swift; sourceTree = "<group>"; };
+		F2E0210320FCB8C6008B3D37 /* OlimpRightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpRightTableViewCell.swift; sourceTree = "<group>"; };
 		F56CE55B929154CAD8999BB5 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F829A6FCCFACA8A1E0EF7957 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +142,7 @@
 		F2E020C920FC792E008B3D37 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020FA20FCB681008B3D37 /* Views */,
 				F2E020D420FCA2CE008B3D37 /* Protocols */,
 				F2E020D120FC8693008B3D37 /* Extensions */,
 			);
@@ -155,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E020CF20FC7B8D008B3D37 /* Page.swift */,
+				F2E020F820FCB231008B3D37 /* OlimpBattleItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +201,7 @@
 		F2E020DB20FCA590008B3D37 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020EF20FCB022008B3D37 /* OlimpTable */,
 				F2E020DC20FCA5B4008B3D37 /* Feed */,
 			);
 			path = Flows;
@@ -213,6 +232,43 @@
 				F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2E020EF20FCB022008B3D37 /* OlimpTable */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020F120FCB045008B3D37 /* ViewModel */,
+				F2E020F020FCB038008B3D37 /* View */,
+			);
+			path = OlimpTable;
+			sourceTree = "<group>";
+		};
+		F2E020F020FCB038008B3D37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020F220FCB0CF008B3D37 /* OlimpTableViewController.storyboard */,
+				F2E020F420FCB0EE008B3D37 /* OlimpTableViewController.swift */,
+				F2E0210120FCB89F008B3D37 /* OlimpLeftTableViewCell.swift */,
+				F2E0210320FCB8C6008B3D37 /* OlimpRightTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2E020F120FCB045008B3D37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020F620FCB103008B3D37 /* OlimpTableViewModel.swift */,
+				F2E020FF20FCB851008B3D37 /* OlimpTableCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F2E020FA20FCB681008B3D37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020FB20FCB681008B3D37 /* DisposableTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +335,7 @@
 				F2E020BC20FC719E008B3D37 /* LaunchScreen.storyboard in Resources */,
 				F2E020B920FC719E008B3D37 /* Assets.xcassets in Resources */,
 				F2E020B720FC719E008B3D37 /* Main.storyboard in Resources */,
+				F2E020F320FCB0CF008B3D37 /* OlimpTableViewController.storyboard in Resources */,
 				F2E020E020FCA5EC008B3D37 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,18 +351,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
@@ -340,15 +401,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E020CD20FC7A12008B3D37 /* OlimpBattleAPI.swift in Sources */,
+				F2E020FC20FCB682008B3D37 /* DisposableTableViewCell.swift in Sources */,
+				F2E0210220FCB89F008B3D37 /* OlimpLeftTableViewCell.swift in Sources */,
 				F2E020D320FC869D008B3D37 /* Data+Extensions.swift in Sources */,
 				F2E020EE20FCA990008B3D37 /* Enum+Collection.swift in Sources */,
+				F2E0210020FCB851008B3D37 /* OlimpTableCellViewModel.swift in Sources */,
+				F2E020F520FCB0EE008B3D37 /* OlimpTableViewController.swift in Sources */,
 				F2E020EA20FCA7F2008B3D37 /* FeedViewModel.swift in Sources */,
+				F2E0210420FCB8C6008B3D37 /* OlimpRightTableViewCell.swift in Sources */,
 				F2E020D620FCA2D7008B3D37 /* CoordinatorProtocol.swift in Sources */,
 				F2E020B220FC719D008B3D37 /* AppDelegate.swift in Sources */,
 				F2E020D820FCA3A9008B3D37 /* UIViewController+Rx.swift in Sources */,
 				F2E020D020FC7B8D008B3D37 /* Page.swift in Sources */,
+				F2E020F720FCB103008B3D37 /* OlimpTableViewModel.swift in Sources */,
 				F2E020E220FCA738008B3D37 /* FeedViewController.swift in Sources */,
 				F2E020DA20FCA3CC008B3D37 /* AppCoordinator.swift in Sources */,
+				F2E020F920FCB231008B3D37 /* OlimpBattleItem.swift in Sources */,
 				F2E020EC20FCA823008B3D37 /* FeedCoordinator.swift in Sources */,
 				F2E020E620FCA77A008B3D37 /* ViewControllerProtocol.swift in Sources */,
 				F2E020E520FCA77A008B3D37 /* ViewModelProtocol.swift in Sources */,

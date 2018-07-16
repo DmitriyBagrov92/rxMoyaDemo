@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import Moya
 
 extension Data {
 
@@ -15,3 +18,16 @@ extension Data {
     }
 
 }
+
+//extension ObservableType where E == Response {
+//
+//    private func mapArrayResponse() -> Observable<E> {
+//        return map { response -> Response in
+//            // your map
+//        }
+//    }
+//
+//    func mapArray<T: Codable>(type: T.Type) -> Observable<[T]?> {
+//        return mapArrayResponse().mapArrayOptional(type)
+//    }
+//}
