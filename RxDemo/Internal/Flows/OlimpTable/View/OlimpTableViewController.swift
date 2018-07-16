@@ -12,36 +12,33 @@ import RxSwift
 import RxDataSources
 
 class OlimpTableViewController: UIViewController, ViewControllerProtocol, Identifierable {
-
+    
     // MARK: Public Properties
-
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     // MARK - ViewControllerProtocol Properties
-
+    
     typealias VM = OlimpTableViewModel
-
+    
     var viewModel: OlimpTableViewModel!
-
+    
     // MARK: Public Properties
-
+    
     private let disposeBag = DisposeBag()
-
+    
     // MARK - ViewController Lyfecircle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         bindUI()
     }
-
+    
 }
 
 private extension OlimpTableViewController {
-
+    
     func bindUI() {
         let dataSource = RxTableViewSectionedReloadDataSource<OlimpItemsSection>(configureCell: { (ds, tv, ip, item) -> UITableViewCell in
             let section = ds[ip.section]
@@ -56,7 +53,7 @@ private extension OlimpTableViewController {
                 return cell
             }
         })
-
+        
         viewModel.tableSections.drive(self.tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }
