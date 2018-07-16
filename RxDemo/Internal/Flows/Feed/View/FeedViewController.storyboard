@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VFX-MT-dsx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--OlimpBattle-->
+        <scene sceneID="bb3-yu-Nud">
+            <objects>
+                <viewController id="ca6-RW-hT2" customClass="FeedViewController" customModule="RxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JgE-By-Ywa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y99-Ck-vAC">
+                                <rect key="frame" x="0.0" y="116" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-ER-gG8">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="&gt;"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4U-BC-mTw">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="&lt;"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="j4U-BC-mTw" secondAttribute="bottom" id="2k6-n7-N4X"/>
+                                    <constraint firstItem="g4X-ER-gG8" firstAttribute="top" secondItem="Y99-Ck-vAC" secondAttribute="top" id="9Pg-Dl-x54"/>
+                                    <constraint firstItem="g4X-ER-gG8" firstAttribute="leading" secondItem="j4U-BC-mTw" secondAttribute="trailing" id="Npq-FM-k5W"/>
+                                    <constraint firstItem="j4U-BC-mTw" firstAttribute="top" secondItem="Y99-Ck-vAC" secondAttribute="top" id="Qub-er-Riy"/>
+                                    <constraint firstItem="g4X-ER-gG8" firstAttribute="width" secondItem="j4U-BC-mTw" secondAttribute="width" id="UMT-4Z-hva"/>
+                                    <constraint firstItem="j4U-BC-mTw" firstAttribute="leading" secondItem="Y99-Ck-vAC" secondAttribute="leading" id="ngN-i4-QfQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="g4X-ER-gG8" secondAttribute="trailing" id="o7u-ct-zNM"/>
+                                    <constraint firstAttribute="height" constant="40" id="wQa-Ka-yj7"/>
+                                    <constraint firstAttribute="bottom" secondItem="g4X-ER-gG8" secondAttribute="bottom" id="xEU-hv-s2l"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvC-jT-M7m">
+                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <connections>
+                                    <segue destination="J4x-UU-D6h" kind="embed" id="cej-6M-ePt"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-qd-ttP">
+                                <rect key="frame" x="176" y="622" width="23" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CnJ-qd-ttP" firstAttribute="centerX" secondItem="JgE-By-Ywa" secondAttribute="centerX" id="1xw-TE-vBL"/>
+                            <constraint firstItem="ME2-Px-B5m" firstAttribute="bottom" secondItem="BvC-jT-M7m" secondAttribute="bottom" id="2aD-du-RxJ"/>
+                            <constraint firstItem="ME2-Px-B5m" firstAttribute="trailing" secondItem="Y99-Ck-vAC" secondAttribute="trailing" id="2hf-ra-Sc8"/>
+                            <constraint firstItem="ME2-Px-B5m" firstAttribute="bottom" secondItem="CnJ-qd-ttP" secondAttribute="bottom" constant="8" id="4aK-4s-hSt"/>
+                            <constraint firstItem="Y99-Ck-vAC" firstAttribute="top" secondItem="ME2-Px-B5m" secondAttribute="top" id="5ML-lg-Hnd"/>
+                            <constraint firstItem="Y99-Ck-vAC" firstAttribute="leading" secondItem="ME2-Px-B5m" secondAttribute="leading" id="AAf-Kv-7g7"/>
+                            <constraint firstItem="BvC-jT-M7m" firstAttribute="top" secondItem="Y99-Ck-vAC" secondAttribute="bottom" id="BAk-9c-JVV"/>
+                            <constraint firstItem="ME2-Px-B5m" firstAttribute="trailing" secondItem="BvC-jT-M7m" secondAttribute="trailing" id="bGn-He-10H"/>
+                            <constraint firstItem="BvC-jT-M7m" firstAttribute="leading" secondItem="ME2-Px-B5m" secondAttribute="leading" id="ydu-a8-YzU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ME2-Px-B5m"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="OlimpBattle" id="ofP-gr-xpk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIt-DG-E4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="136.28185907046478"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="i8C-8d-cfK">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="J4x-UU-D6h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93d-Cw-N76" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="206"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jps-Yh-v5R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VFX-MT-dsx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="628-kk-0UF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ca6-RW-hT2" kind="relationship" relationship="rootViewController" id="FV3-Kf-Q8l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibs-oy-epe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="136"/>
+        </scene>
+    </scenes>
+</document>

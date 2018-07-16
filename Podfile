@@ -8,6 +8,7 @@ target 'RxDemo' do
     pod 'RxCocoa',    '~> 4.0'
     pod 'Alamofire', '~> 4.7'
     pod 'Moya/RxSwift', '~> 11.0'
+    pod 'Swinject'
 
   # Pods for RxDemo
 

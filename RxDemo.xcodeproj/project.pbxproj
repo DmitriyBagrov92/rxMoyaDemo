@@ -15,6 +15,17 @@
 		F2E020CD20FC7A12008B3D37 /* OlimpBattleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020CC20FC7A12008B3D37 /* OlimpBattleAPI.swift */; };
 		F2E020D020FC7B8D008B3D37 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020CF20FC7B8D008B3D37 /* Page.swift */; };
 		F2E020D320FC869D008B3D37 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020D220FC869D008B3D37 /* Data+Extensions.swift */; };
+		F2E020D620FCA2D7008B3D37 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020D520FCA2D7008B3D37 /* CoordinatorProtocol.swift */; };
+		F2E020D820FCA3A9008B3D37 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020D720FCA3A9008B3D37 /* UIViewController+Rx.swift */; };
+		F2E020DA20FCA3CC008B3D37 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020D920FCA3CC008B3D37 /* AppCoordinator.swift */; };
+		F2E020E020FCA5EC008B3D37 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E020DF20FCA5EC008B3D37 /* FeedViewController.storyboard */; };
+		F2E020E220FCA738008B3D37 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E120FCA738008B3D37 /* FeedViewController.swift */; };
+		F2E020E520FCA77A008B3D37 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E320FCA779008B3D37 /* ViewModelProtocol.swift */; };
+		F2E020E620FCA77A008B3D37 /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E420FCA77A008B3D37 /* ViewControllerProtocol.swift */; };
+		F2E020E820FCA7C3008B3D37 /* Identifierable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E720FCA7C3008B3D37 /* Identifierable.swift */; };
+		F2E020EA20FCA7F2008B3D37 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */; };
+		F2E020EC20FCA823008B3D37 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020EB20FCA823008B3D37 /* FeedCoordinator.swift */; };
+		F2E020EE20FCA990008B3D37 /* Enum+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +39,17 @@
 		F2E020CC20FC7A12008B3D37 /* OlimpBattleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OlimpBattleAPI.swift; sourceTree = "<group>"; };
 		F2E020CF20FC7B8D008B3D37 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		F2E020D220FC869D008B3D37 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		F2E020D520FCA2D7008B3D37 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		F2E020D720FCA3A9008B3D37 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		F2E020D920FCA3CC008B3D37 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F2E020DF20FCA5EC008B3D37 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
+		F2E020E120FCA738008B3D37 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F2E020E320FCA779008B3D37 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		F2E020E420FCA77A008B3D37 /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F2E020E720FCA7C3008B3D37 /* Identifierable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifierable.swift; sourceTree = "<group>"; };
+		F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		F2E020EB20FCA823008B3D37 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enum+Collection.swift"; sourceTree = "<group>"; };
 		F56CE55B929154CAD8999BB5 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F829A6FCCFACA8A1E0EF7957 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +104,7 @@
 		F2E020B020FC719D008B3D37 /* RxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020B120FC719D008B3D37 /* AppDelegate.swift */,
 				F2E020C920FC792E008B3D37 /* Common */,
 				F2E020C820FC791F008B3D37 /* Internal */,
 			);
@@ -91,10 +114,11 @@
 		F2E020C820FC791F008B3D37 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020DB20FCA590008B3D37 /* Flows */,
 				F2E020CE20FC7B69008B3D37 /* Models */,
-				F2E020CB20FC79C1008B3D37 /* Providers */,
+				F2E020CB20FC79C1008B3D37 /* Services */,
 				F2E020CA20FC7953008B3D37 /* Resources */,
-				F2E020B120FC719D008B3D37 /* AppDelegate.swift */,
+				F2E020D920FCA3CC008B3D37 /* AppCoordinator.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -102,6 +126,7 @@
 		F2E020C920FC792E008B3D37 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020D420FCA2CE008B3D37 /* Protocols */,
 				F2E020D120FC8693008B3D37 /* Extensions */,
 			);
 			path = Common;
@@ -118,12 +143,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F2E020CB20FC79C1008B3D37 /* Providers */ = {
+		F2E020CB20FC79C1008B3D37 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F2E020CC20FC7A12008B3D37 /* OlimpBattleAPI.swift */,
 			);
-			path = Providers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F2E020CE20FC7B69008B3D37 /* Models */ = {
@@ -137,9 +162,57 @@
 		F2E020D120FC8693008B3D37 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */,
 				F2E020D220FC869D008B3D37 /* Data+Extensions.swift */,
+				F2E020D720FCA3A9008B3D37 /* UIViewController+Rx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F2E020D420FCA2CE008B3D37 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020E720FCA7C3008B3D37 /* Identifierable.swift */,
+				F2E020E420FCA77A008B3D37 /* ViewControllerProtocol.swift */,
+				F2E020E320FCA779008B3D37 /* ViewModelProtocol.swift */,
+				F2E020D520FCA2D7008B3D37 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F2E020DB20FCA590008B3D37 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020DC20FCA5B4008B3D37 /* Feed */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		F2E020DC20FCA5B4008B3D37 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020DE20FCA5CC008B3D37 /* ViewModel */,
+				F2E020DD20FCA5C4008B3D37 /* View */,
+				F2E020EB20FCA823008B3D37 /* FeedCoordinator.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F2E020DD20FCA5C4008B3D37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020DF20FCA5EC008B3D37 /* FeedViewController.storyboard */,
+				F2E020E120FCA738008B3D37 /* FeedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2E020DE20FCA5CC008B3D37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +279,7 @@
 				F2E020BC20FC719E008B3D37 /* LaunchScreen.storyboard in Resources */,
 				F2E020B920FC719E008B3D37 /* Assets.xcassets in Resources */,
 				F2E020B720FC719E008B3D37 /* Main.storyboard in Resources */,
+				F2E020E020FCA5EC008B3D37 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +298,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -232,6 +307,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,8 +341,18 @@
 			files = (
 				F2E020CD20FC7A12008B3D37 /* OlimpBattleAPI.swift in Sources */,
 				F2E020D320FC869D008B3D37 /* Data+Extensions.swift in Sources */,
+				F2E020EE20FCA990008B3D37 /* Enum+Collection.swift in Sources */,
+				F2E020EA20FCA7F2008B3D37 /* FeedViewModel.swift in Sources */,
+				F2E020D620FCA2D7008B3D37 /* CoordinatorProtocol.swift in Sources */,
 				F2E020B220FC719D008B3D37 /* AppDelegate.swift in Sources */,
+				F2E020D820FCA3A9008B3D37 /* UIViewController+Rx.swift in Sources */,
 				F2E020D020FC7B8D008B3D37 /* Page.swift in Sources */,
+				F2E020E220FCA738008B3D37 /* FeedViewController.swift in Sources */,
+				F2E020DA20FCA3CC008B3D37 /* AppCoordinator.swift in Sources */,
+				F2E020EC20FCA823008B3D37 /* FeedCoordinator.swift in Sources */,
+				F2E020E620FCA77A008B3D37 /* ViewControllerProtocol.swift in Sources */,
+				F2E020E520FCA77A008B3D37 /* ViewModelProtocol.swift in Sources */,
+				F2E020E820FCA7C3008B3D37 /* Identifierable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
