@@ -48,7 +48,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvC-jT-M7m">
                                 <rect key="frame" x="0.0" y="156" width="375" height="511"/>
                                 <connections>
-                                    <segue destination="dtB-qz-Ra0" kind="embed" identifier="OlimpTableViewController" id="hAR-7C-wCO"/>
+                                    <segue destination="J4x-UU-D6h" kind="embed" identifier="FeedContentPageViewController" id="yXG-Jj-E3n"/>
                                 </connections>
                             </containerView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-qd-ttP">
@@ -75,21 +75,13 @@
             </objects>
             <point key="canvasLocation" x="348" y="136.28185907046478"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Feed Content Page View Controller-->
         <scene sceneID="i8C-8d-cfK">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="J4x-UU-D6h" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="J4x-UU-D6h" customClass="FeedContentPageViewController" customModule="RxDemo" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93d-Cw-N76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="136"/>
-        </scene>
-        <!--OlimpTableViewController-->
-        <scene sceneID="gkN-ae-Fn9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="OlimpTableViewController" id="dtB-qz-Ra0" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P6M-uP-E4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="932" y="-151"/>
+            <point key="canvasLocation" x="1039" y="206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jps-Yh-v5R">

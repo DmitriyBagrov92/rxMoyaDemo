@@ -63,7 +63,7 @@ class OlimpTableViewModel: ViewModelProtocol {
 
         self.tableSections = olimpItems.map({ items in
             let cellViewModels = items.map({ OlimpTableCellViewModel(item: $0) })
-            return [OlimpItemsSection(type: type, items: cellViewModels) ]
+            return [OlimpItemsSection(type: type, items: cellViewModels)]
         }).asDriver(onErrorJustReturn: [])
 
         page.flatMapLatest({ provider.rx.request(type.requestType(with: $0)).map([OlimpBattleItem].self) }).map({ try! olimpItems.value() + $0 }).bind(to: olimpItems).disposed(by: disposeBag)

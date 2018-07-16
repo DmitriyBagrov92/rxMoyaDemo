@@ -15,12 +15,12 @@ class FeedViewModel: ViewModelProtocol {
 
     // MARK: Public Properties
 
-    let tableViewModels: [OlimpTableViewModel]
+    var feedContentPageViewModel: FeedContentPageViewModel
 
     // MARK: Lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>) {
-        self.tableViewModels = OlimpTableType.cases().map({ OlimpTableViewModel(provider: provider, type: $0) })
+        self.feedContentPageViewModel = FeedContentPageViewModel(provider: provider)
     }
 
 }

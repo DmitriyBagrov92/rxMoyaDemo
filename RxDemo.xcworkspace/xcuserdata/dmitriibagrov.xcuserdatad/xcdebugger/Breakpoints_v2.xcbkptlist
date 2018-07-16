@@ -21,5 +21,85 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxDemo/Internal/AppCoordinator.swift"
+            timestampString = "553451183.416271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "start(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+            timestampString = "553453670.939755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init(provider:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553454057.7416019"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "373">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxDemo.OlimpTableViewModel) -&gt; RxDemo.OlimpTableViewController in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553454057.744119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
+            timestampString = "553455060.449581"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "init(provider:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

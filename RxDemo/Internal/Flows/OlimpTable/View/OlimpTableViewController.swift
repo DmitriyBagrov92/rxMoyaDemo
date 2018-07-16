@@ -11,7 +11,11 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
-class OlimpTableViewController: UITableViewController, ViewControllerProtocol, Identifierable {
+class OlimpTableViewController: UIViewController, ViewControllerProtocol, Identifierable {
+
+    // MARK: Public Properties
+
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK - ViewControllerProtocol Properties
 
@@ -27,12 +31,11 @@ class OlimpTableViewController: UITableViewController, ViewControllerProtocol, I
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        bindUI()
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bindUI()
     }
 
 }
@@ -54,6 +57,6 @@ private extension OlimpTableViewController {
             }
         })
 
-        viewModel.tableSections.drive(tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        viewModel.tableSections.drive(self.tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }

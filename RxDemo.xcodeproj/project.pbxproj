@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		87AB4ED81E547D6505BA17EA /* Pods_RxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8A58A9343863631EC37F14 /* Pods_RxDemo.framework */; };
+		F24A548220FD0287009A6575 /* FeedContentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A548120FD0287009A6575 /* FeedContentPageViewController.swift */; };
+		F24A548420FD02D9009A6575 /* FeedContentPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A548320FD02D9009A6575 /* FeedContentPageViewModel.swift */; };
+		F24A548620FD06C6009A6575 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A548520FD06C6009A6575 /* Array+Extension.swift */; };
 		F2E020B220FC719D008B3D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E020B120FC719D008B3D37 /* AppDelegate.swift */; };
 		F2E020B720FC719E008B3D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E020B520FC719E008B3D37 /* Main.storyboard */; };
 		F2E020B920FC719E008B3D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E020B820FC719E008B3D37 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		6B8A58A9343863631EC37F14 /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F24A548120FD0287009A6575 /* FeedContentPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentPageViewController.swift; sourceTree = "<group>"; };
+		F24A548320FD02D9009A6575 /* FeedContentPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentPageViewModel.swift; sourceTree = "<group>"; };
+		F24A548520FD06C6009A6575 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		F2E020AE20FC719D008B3D37 /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E020B120FC719D008B3D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E020B620FC719E008B3D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		F2E020D120FC8693008B3D37 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F24A548520FD06C6009A6575 /* Array+Extension.swift */,
 				F2E020ED20FCA98F008B3D37 /* Enum+Collection.swift */,
 				F2E020D220FC869D008B3D37 /* Data+Extensions.swift */,
 				F2E020D720FCA3A9008B3D37 /* UIViewController+Rx.swift */,
@@ -222,6 +229,7 @@
 			children = (
 				F2E020DF20FCA5EC008B3D37 /* FeedViewController.storyboard */,
 				F2E020E120FCA738008B3D37 /* FeedViewController.swift */,
+				F24A548120FD0287009A6575 /* FeedContentPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				F2E020E920FCA7F2008B3D37 /* FeedViewModel.swift */,
+				F24A548320FD02D9009A6575 /* FeedContentPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -415,9 +424,12 @@
 				F2E020D020FC7B8D008B3D37 /* Page.swift in Sources */,
 				F2E020F720FCB103008B3D37 /* OlimpTableViewModel.swift in Sources */,
 				F2E020E220FCA738008B3D37 /* FeedViewController.swift in Sources */,
+				F24A548620FD06C6009A6575 /* Array+Extension.swift in Sources */,
 				F2E020DA20FCA3CC008B3D37 /* AppCoordinator.swift in Sources */,
 				F2E020F920FCB231008B3D37 /* OlimpBattleItem.swift in Sources */,
+				F24A548220FD0287009A6575 /* FeedContentPageViewController.swift in Sources */,
 				F2E020EC20FCA823008B3D37 /* FeedCoordinator.swift in Sources */,
+				F24A548420FD02D9009A6575 /* FeedContentPageViewModel.swift in Sources */,
 				F2E020E620FCA77A008B3D37 /* ViewControllerProtocol.swift in Sources */,
 				F2E020E520FCA77A008B3D37 /* ViewModelProtocol.swift in Sources */,
 				F2E020E820FCA7C3008B3D37 /* Identifierable.swift in Sources */,

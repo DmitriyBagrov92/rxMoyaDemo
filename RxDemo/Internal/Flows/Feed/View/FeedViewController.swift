@@ -35,8 +35,8 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
     //TODO: Temporary using of segue
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == OlimpTableViewController.identifier, let vc = segue.destination as? OlimpTableViewController {
-            vc.viewModel = viewModel.tableViewModels.first!
+        if segue.identifier == FeedContentPageViewController.identifier, let vc = segue.destination as? FeedContentPageViewController {
+            vc.viewModel = viewModel.feedContentPageViewModel
         }
     }
 
