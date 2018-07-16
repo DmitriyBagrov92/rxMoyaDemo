@@ -25,6 +25,7 @@ struct FeedPage: Page, Codable {
     var search: String?
 
     var next: Page? {
+        //TODO: Add additinal logic on last page (return nil)
         return FeedPage(offset: offset + limit, limit: limit, search: search)
     }
 

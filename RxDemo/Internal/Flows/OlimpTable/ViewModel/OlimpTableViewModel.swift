@@ -47,6 +47,8 @@ class OlimpTableViewModel: ViewModelProtocol {
 
     // MARK: Public Properties: Input
 
+    let tableWillDisplayRow: AnyObserver<IndexPath>
+
     // MARK: Public Properties: Output
 
     let tableSections: Driver<[OlimpItemsSection]>
@@ -58,6 +60,9 @@ class OlimpTableViewModel: ViewModelProtocol {
     // MARK: lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>, type: OlimpTableType) {
+        let _lastTableRow = PublishSubject<IndexPath>()
+        self.tableWillDisplayRow = _lastTableRow.asObserver()
+
         let page = BehaviorSubject<FeedPage>(value: FeedPage())
         let olimpItems = BehaviorSubject<[OlimpBattleItem]>(value: [])
 
@@ -66,7 +71,21 @@ class OlimpTableViewModel: ViewModelProtocol {
             return [OlimpItemsSection(type: type, items: cellViewModels)]
         }).asDriver(onErrorJustReturn: [])
 
+        //Business Logic
+
         page.flatMapLatest({ provider.rx.request(type.requestType(with: $0)).map([OlimpBattleItem].self) }).map({ try! olimpItems.value() + $0 }).bind(to: olimpItems).disposed(by: disposeBag)
+
+        _lastTableRow.filter({ (ip) -> Bool in
+            let items = try? olimpItems.value()
+            return (items?.count ?? Int.max) - 1 == ip.row
+        })
+        .withLatestFrom(page)
+        .map({ $0.next as? FeedPage })
+        .filter({ $0 != nil})
+        .map({ $0! })
+        .bind(to: page)
+        .disposed(by: disposeBag)
+
 
     }
 

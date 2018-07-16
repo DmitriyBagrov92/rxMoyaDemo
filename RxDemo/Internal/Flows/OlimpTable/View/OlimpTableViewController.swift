@@ -37,6 +37,14 @@ class OlimpTableViewController: UIViewController, ViewControllerProtocol, Identi
     
 }
 
+extension OlimpTableViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        viewModel.tableWillDisplayRow.onNext(indexPath)
+    }
+
+}
+
 private extension OlimpTableViewController {
     
     func bindUI() {

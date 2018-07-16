@@ -92,11 +92,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553455988.889938"
+            timestampString = "553459148.84893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "init(provider:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
+            timestampString = "553459148.848985"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "init(provider:type:)"
             landmarkType = "7">
          </BreakpointContent>
