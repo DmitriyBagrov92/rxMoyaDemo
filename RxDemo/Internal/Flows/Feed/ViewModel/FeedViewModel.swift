@@ -21,6 +21,10 @@ class FeedViewModel: ViewModelProtocol {
 
     let searchText: AnyObserver<String?>
 
+    // MARK: Public Properties - Output
+
+    let pageControlValue: Driver<Int>
+
     // MARK: Public Properties
 
     var feedContentPageViewModel: FeedContentPageViewModel
@@ -32,7 +36,6 @@ class FeedViewModel: ViewModelProtocol {
     // MARK: Lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>) {
-
         let _scrollToLeftAction = PublishSubject<Void>()
         self.scrollToLeftButtonAction = _scrollToLeftAction.asObserver()
 
@@ -44,10 +47,15 @@ class FeedViewModel: ViewModelProtocol {
 
         self.feedContentPageViewModel = FeedContentPageViewModel(provider: provider, search: _searchText.asObservable())
 
+        let _pageControlValue = BehaviorSubject<Int>(value: 0)
+        self.pageControlValue = _pageControlValue.asDriver(onErrorJustReturn: 0)
+
         //Business Logic
 
         _scrollToLeftAction.map({ .reverse }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
         _scrollToRightAction.map({ .forward }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
+
+        feedContentPageViewModel.currentViewControllerIndex.bind(to: _pageControlValue).disposed(by: disposeBag)
     }
 
 }

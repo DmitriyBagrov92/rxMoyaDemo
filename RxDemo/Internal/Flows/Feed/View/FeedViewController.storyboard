@@ -53,6 +53,8 @@
                             </containerView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="CnJ-qd-ttP">
                                 <rect key="frame" x="176" y="622" width="23" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="OlimpBattle" id="ofP-gr-xpk"/>
                     <connections>
+                        <outlet property="contentPageControl" destination="CnJ-qd-ttP" id="QOq-rk-wi9"/>
                         <outlet property="toLeftButton" destination="j4U-BC-mTw" id="lI6-dW-5X7"/>
                         <outlet property="toRightButton" destination="g4X-ER-gG8" id="srh-SV-Mtg"/>
                     </connections>

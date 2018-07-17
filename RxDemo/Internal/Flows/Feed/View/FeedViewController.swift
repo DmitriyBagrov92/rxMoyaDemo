@@ -24,6 +24,8 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
 
     @IBOutlet weak var toRightButton: UIButton!
     
+    @IBOutlet weak var contentPageControl: UIPageControl!
+    
     // MARK: Private Properties
 
     private let searchController = UISearchController(searchResultsController: nil)
@@ -73,6 +75,8 @@ private extension FeedViewController {
         searchController.searchBar.rx.text.orEmpty
         .throttle(0.3, scheduler: MainScheduler.instance).distinctUntilChanged()
         .bind(to: viewModel.searchText).disposed(by: disposeBag)
+
+        viewModel.pageControlValue.drive(contentPageControl.rx.currentPage).disposed(by: disposeBag)
     }
 
 }

@@ -108,6 +108,7 @@ class OlimpTableViewModel: ViewModelProtocol {
         //Refresh table logic
         _refreshData.map({ [] }).bind(to: olimpItems).disposed(by: disposeBag)
         _refreshData.withLatestFrom(_searchText).map({ search in return FeedPage(offset: 0, limit: 10, search: search) }).bind(to: page).disposed(by: disposeBag)
+        _refreshData.delay(1.0, scheduler: MainScheduler.instance).map({ _ in return false }).bind(to: _tableRefreshing).disposed(by: disposeBag)
 
         //Action on search
         search?.bind(to: _searchText).disposed(by: disposeBag)

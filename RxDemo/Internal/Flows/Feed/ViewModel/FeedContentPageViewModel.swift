@@ -24,6 +24,8 @@ class FeedContentPageViewModel: ViewModelProtocol {
 
     let updateActiveViewController: Driver<(UIViewController, UIPageViewControllerNavigationDirection)>
 
+    let currentViewControllerIndex: Observable<Int>
+
     var viewControllers: Driver<[OlimpTableViewController]>
 
     // MARK: Private Properties
@@ -38,10 +40,6 @@ class FeedContentPageViewModel: ViewModelProtocol {
         let _scrollToDirection = PublishSubject<UIPageViewControllerNavigationDirection>()
         self.scrollToDirection = _scrollToDirection.asObserver()
 
-        let _activeViewController = PublishSubject<(UIViewController, UIPageViewControllerNavigationDirection)>()
-        self.changeActiveViewController = _activeViewController.asObserver()
-        self.updateActiveViewController = _activeViewController.asDriver(onErrorJustReturn: (UIViewController(), .forward))
-
         self.tableViewModels = OlimpTableType.cases().map({ OlimpTableViewModel(provider: provider, type: $0, search: search) })
 
         let _viewControllers = Observable.just(tableViewModels.map({ (vm) -> OlimpTableViewController in
@@ -49,6 +47,14 @@ class FeedContentPageViewModel: ViewModelProtocol {
             vc.viewModel = vm
             return vc
         }))
+
+        let _activeViewController = PublishSubject<(UIViewController, UIPageViewControllerNavigationDirection)>()
+        self.changeActiveViewController = _activeViewController.asObserver()
+        self.updateActiveViewController = _activeViewController.asDriver(onErrorJustReturn: (UIViewController(), .forward))
+        self.currentViewControllerIndex = _activeViewController.withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers)).map({ vc, vcs in
+            return vcs.index(of: vc.0 as! OlimpTableViewController)
+        }).filter({ $0 != nil }).map({ $0! }).asObservable()
+
         self.viewControllers = _viewControllers.asDriver(onErrorJustReturn: [])
 
         //Business logic
