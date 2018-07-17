@@ -55,7 +55,7 @@ extension FeedContentPageViewController: UIPageViewControllerDataSource {
 extension FeedContentPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
-            viewModel.changeActiveViewController.onNext(previousViewControllers.last!)
+            viewModel.changeActiveViewController.onNext((previousViewControllers.last!, .forward))
         }
     }
 
@@ -67,11 +67,11 @@ private extension FeedContentPageViewController {
         viewModel.viewControllers.drive(onNext: { [weak self] (viewControllers) in
             self?.contentViewController = viewControllers
             self?.setViewControllers([viewControllers.first!], direction: .forward, animated: false, completion: nil)
-            self?.viewModel.changeActiveViewController.onNext(viewControllers.first!)
+            self?.viewModel.changeActiveViewController.onNext((viewControllers.first!, .forward))
         }).disposed(by: disposeBag)
 
-        viewModel.updateActiveViewController.drive(onNext: { [weak self] (viewController) in
-            self?.setViewControllers([viewController], direction: .forward, animated: true, completion: nil)
+        viewModel.updateActiveViewController.drive(onNext: { [weak self] (viewController, direction) in
+            self?.setViewControllers([viewController], direction: direction, animated: true, completion: nil)
         }).disposed(by: disposeBag)
     }
 

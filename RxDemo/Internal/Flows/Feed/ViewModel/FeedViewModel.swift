@@ -46,8 +46,8 @@ class FeedViewModel: ViewModelProtocol {
 
         //Business Logic
 
-        _scrollToLeftAction.map({ ScrollDirection.left }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
-        _scrollToRightAction.map({ ScrollDirection.right }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
+        _scrollToLeftAction.map({ .reverse }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
+        _scrollToRightAction.map({ .forward }).bind(to: self.feedContentPageViewModel.scrollToDirection).disposed(by: disposeBag)
     }
 
 }

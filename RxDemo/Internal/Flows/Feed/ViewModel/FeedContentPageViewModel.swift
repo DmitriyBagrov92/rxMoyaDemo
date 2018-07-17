@@ -12,22 +12,17 @@ import RxCocoa
 import Moya
 import UIKit
 
-enum ScrollDirection {
-    case left
-    case right
-}
-
 class FeedContentPageViewModel: ViewModelProtocol {
 
     // MARK: Public Properties - Input
 
-    let scrollToDirection: AnyObserver<ScrollDirection>
+    let scrollToDirection: AnyObserver<UIPageViewControllerNavigationDirection>
 
-    let changeActiveViewController: AnyObserver<UIViewController>
+    let changeActiveViewController: AnyObserver<(UIViewController, UIPageViewControllerNavigationDirection)>
 
     // MARK: Public Properties - Output
 
-    let updateActiveViewController: Driver<UIViewController>
+    let updateActiveViewController: Driver<(UIViewController, UIPageViewControllerNavigationDirection)>
 
     var viewControllers: Driver<[OlimpTableViewController]>
 
@@ -40,12 +35,12 @@ class FeedContentPageViewModel: ViewModelProtocol {
     // MARK: Lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>, search: Observable<String?>? = nil) {
-        let _scrollToDirection = PublishSubject<ScrollDirection>()
+        let _scrollToDirection = PublishSubject<UIPageViewControllerNavigationDirection>()
         self.scrollToDirection = _scrollToDirection.asObserver()
 
-        let _activeViewController = PublishSubject<UIViewController>()
+        let _activeViewController = PublishSubject<(UIViewController, UIPageViewControllerNavigationDirection)>()
         self.changeActiveViewController = _activeViewController.asObserver()
-        self.updateActiveViewController = _activeViewController.asDriver(onErrorJustReturn: UIViewController())
+        self.updateActiveViewController = _activeViewController.asDriver(onErrorJustReturn: (UIViewController(), .forward))
 
         self.tableViewModels = OlimpTableType.cases().map({ OlimpTableViewModel(provider: provider, type: $0, search: search) })
 
@@ -58,12 +53,12 @@ class FeedContentPageViewModel: ViewModelProtocol {
 
         //Business logic
 
-        _scrollToDirection.filter({ $0 == .left }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
-            .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! - 1]}).filter({ $0 != nil }).map({ $0! })
+        _scrollToDirection.filter({ $0 == .forward }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
+            .map({ $0.1[safe: $0.1.index(of: $0.0.0 as! OlimpTableViewController)! + 1]}).filter({ $0 != nil }).map({ ($0!, .forward) })
             .bind(to: _activeViewController).disposed(by: disposeBag)
 
-        _scrollToDirection.filter({ $0 == .right }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
-            .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! + 1]}).filter({ $0 != nil }).map({ $0! })
+        _scrollToDirection.filter({ $0 == .reverse }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
+            .map({ $0.1[safe: $0.1.index(of: $0.0.0 as! OlimpTableViewController)! - 1]}).filter({ $0 != nil }).map({ ($0!, .reverse) })
             .bind(to: _activeViewController).disposed(by: disposeBag)
     }
 }
