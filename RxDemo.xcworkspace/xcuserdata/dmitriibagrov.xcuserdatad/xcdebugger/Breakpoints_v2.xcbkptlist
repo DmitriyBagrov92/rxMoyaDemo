@@ -22,19 +22,15 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxDemo/Internal/AppCoordinator.swift"
-            timestampString = "553451183.416271"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "start(from:)"
-            landmarkType = "7">
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -43,30 +39,170 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553543964.451423"
+            filePath = "RxDemo/Internal/Flows/Feed/View/FeedContentPageViewController.swift"
+            timestampString = "553544464.710678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "init(provider:type:search:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553543964.451486"
+            filePath = "RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+            timestampString = "553544464.711486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "init(provider:type:search:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "init(provider:search:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.829524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2191">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 ((__ObjC.UIViewController, __C.UIPageViewControllerNavigationDirection), Swift.Array&lt;RxDemo.OlimpTableViewController&gt;) -&gt; Swift.Optional&lt;RxDemo.OlimpTableViewController&gt; in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.831822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (Swift.Optional&lt;RxDemo.OlimpTableViewController&gt;) -&gt; Swift.Bool in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.8342479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #6 (Swift.Optional&lt;RxDemo.OlimpTableViewController&gt;) -&gt; (__ObjC.UIViewController, __C.UIPageViewControllerNavigationDirection) in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.836032"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+            timestampString = "553544464.711695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "init(provider:search:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.841391"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "3265">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #8 ((__ObjC.UIViewController, __C.UIPageViewControllerNavigationDirection), Swift.Array&lt;RxDemo.OlimpTableViewController&gt;) -&gt; Swift.Optional&lt;RxDemo.OlimpTableViewController&gt; in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.84338"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #9 (Swift.Optional&lt;RxDemo.OlimpTableViewController&gt;) -&gt; Swift.Bool in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.8451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #10 (Swift.Optional&lt;RxDemo.OlimpTableViewController&gt;) -&gt; (__ObjC.UIViewController, __C.UIPageViewControllerNavigationDirection) in RxDemo.FeedContentPageViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.FeedContentPageViewModel"
+                  moduleName = "RxDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/Feed/ViewModel/FeedContentPageViewModel.swift"
+                  timestampString = "553544464.846805"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

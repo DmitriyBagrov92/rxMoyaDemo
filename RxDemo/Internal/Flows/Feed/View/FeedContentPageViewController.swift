@@ -55,7 +55,7 @@ extension FeedContentPageViewController: UIPageViewControllerDataSource {
 extension FeedContentPageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if completed {
-            viewModel.changeActiveViewController.onNext((previousViewControllers.last!, .forward))
+            viewModel.changeActiveViewController.onNext((viewControllers!.last!, .forward))
         }
     }
 
