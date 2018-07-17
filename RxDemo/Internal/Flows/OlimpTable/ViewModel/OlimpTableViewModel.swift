@@ -92,7 +92,6 @@ class OlimpTableViewModel: ViewModelProtocol {
         let requestNextPage = page.flatMapLatest({ provider.rx.request(type.requestType(with: $0)).map([OlimpBattleItem].self) })
 
         requestNextPage.map({ try! olimpItems.value() + $0 }).bind(to: olimpItems).disposed(by: disposeBag)
-        requestNextPage.map({ _ in return false }).bind(to: _tableRefreshing).disposed(by: disposeBag)
 
         //Pagination logic
         _lastTableRow.filter({ (ip) -> Bool in

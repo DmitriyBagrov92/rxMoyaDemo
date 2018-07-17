@@ -44,7 +44,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553535824.44287"
+            timestampString = "553543313.450034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "78"
@@ -60,61 +60,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553535824.443413"
+            timestampString = "553543313.4504451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
             endingLineNumber = "99"
             landmarkName = "init(provider:type:search:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-            timestampString = "553535824.443729"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "init(provider:type:search:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RxDemo.OlimpTableViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, type: RxDemo.OlimpTableType, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.OlimpTableViewModel"
-                  moduleName = "RxDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-                  timestampString = "553535824.578016"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "5602">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #11 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in RxDemo.OlimpTableViewModel.init(provider: Moya.MoyaProvider&lt;RxDemo.OlimpBattle&gt;, type: RxDemo.OlimpTableType, search: Swift.Optional&lt;RxSwift.Observable&lt;Swift.Optional&lt;Swift.String&gt;&gt;&gt;) -&gt; RxDemo.OlimpTableViewModel"
-                  moduleName = "RxDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitriibagrov/rxMoyaDemo/RxDemo/Internal/Flows/OlimpTable/ViewModel/OlimpTableViewModel.swift"
-                  timestampString = "553535824.5802161"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
