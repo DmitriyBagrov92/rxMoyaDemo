@@ -51,6 +51,8 @@ class OlimpTableViewModel: ViewModelProtocol {
 
     let tableRequireRefresh: AnyObserver<Void>
 
+    let searchText: AnyObserver<String?>
+
     // MARK: Public Properties: Output
 
     let tableIsRefreshing: Driver<Bool>
@@ -63,7 +65,7 @@ class OlimpTableViewModel: ViewModelProtocol {
 
     // MARK: lyfecircle
 
-    init(provider: MoyaProvider<OlimpBattle>, type: OlimpTableType) {
+    init(provider: MoyaProvider<OlimpBattle>, type: OlimpTableType, search: Observable<String?>? = nil) {
         let _refreshData = PublishSubject<Void>()
         self.tableRequireRefresh = _refreshData.asObserver()
 
@@ -80,6 +82,9 @@ class OlimpTableViewModel: ViewModelProtocol {
             let cellViewModels = items.map({ OlimpTableCellViewModel(item: $0) })
             return [OlimpItemsSection(type: type, items: cellViewModels)]
         }).asDriver(onErrorJustReturn: [])
+
+        let _searchText = PublishSubject<String?>()
+        self.searchText = _searchText.asObserver()
 
         //Business Logic
         //Network Data Request logic
@@ -103,8 +108,11 @@ class OlimpTableViewModel: ViewModelProtocol {
 
         //Refresh table logic
         _refreshData.map({ [] }).bind(to: olimpItems).disposed(by: disposeBag)
-        _refreshData.map({ _ in return FeedPage() }).bind(to: page).disposed(by: disposeBag)
+        _refreshData.withLatestFrom(_searchText).map({ search in return FeedPage(offset: 0, limit: 10, search: search) }).bind(to: page).disposed(by: disposeBag)
 
+        //Action on search
+        search?.bind(to: _searchText).disposed(by: disposeBag)
+        _searchText.map({ _ in Void() }).bind(to: _refreshData).disposed(by: disposeBag)
     }
 
 }

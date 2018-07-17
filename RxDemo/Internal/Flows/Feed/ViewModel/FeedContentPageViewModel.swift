@@ -39,7 +39,7 @@ class FeedContentPageViewModel: ViewModelProtocol {
 
     // MARK: Lyfecircle
 
-    init(provider: MoyaProvider<OlimpBattle>) {
+    init(provider: MoyaProvider<OlimpBattle>, search: Observable<String?>? = nil) {
         let _scrollToDirection = PublishSubject<ScrollDirection>()
         self.scrollToDirection = _scrollToDirection.asObserver()
 
@@ -47,7 +47,7 @@ class FeedContentPageViewModel: ViewModelProtocol {
         self.changeActiveViewController = _activeViewController.asObserver()
         self.updateActiveViewController = _activeViewController.asDriver(onErrorJustReturn: UIViewController())
 
-        self.tableViewModels = OlimpTableType.cases().map({ OlimpTableViewModel(provider: provider, type: $0) })
+        self.tableViewModels = OlimpTableType.cases().map({ OlimpTableViewModel(provider: provider, type: $0, search: search) })
 
         let _viewControllers = Observable.just(tableViewModels.map({ (vm) -> OlimpTableViewController in
             let vc = UIStoryboard(name: OlimpTableViewController.identifier, bundle: nil).instantiateInitialViewController() as! OlimpTableViewController
@@ -59,11 +59,11 @@ class FeedContentPageViewModel: ViewModelProtocol {
         //Business logic
 
         _scrollToDirection.filter({ $0 == .left }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
-        .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! - 1]}).filter({ $0 != nil }).map({ $0! })
-        .bind(to: _activeViewController).disposed(by: disposeBag)
+            .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! - 1]}).filter({ $0 != nil }).map({ $0! })
+            .bind(to: _activeViewController).disposed(by: disposeBag)
 
         _scrollToDirection.filter({ $0 == .right }).withLatestFrom(Observable.combineLatest(_activeViewController, _viewControllers) )
-        .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! + 1]}).filter({ $0 != nil }).map({ $0! })
-        .bind(to: _activeViewController).disposed(by: disposeBag)
+            .map({ $0.1[safe: $0.1.index(of: $0.0 as! OlimpTableViewController)! + 1]}).filter({ $0 != nil }).map({ $0! })
+            .bind(to: _activeViewController).disposed(by: disposeBag)
     }
 }

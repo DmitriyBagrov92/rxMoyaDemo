@@ -26,6 +26,8 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
     
     // MARK: Private Properties
 
+    private let searchController = UISearchController(searchResultsController: nil)
+
     private let disposeBag = DisposeBag()
 
     // MARK - View Controller Lifecycle
@@ -33,6 +35,7 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         bindUI()
     }
 
@@ -46,11 +49,30 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
 
 }
 
+// MARK - UISearchResultsUpdating
+
+extension FeedViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+    }
+
+}
+
 private extension FeedViewController {
+
+    func setupUI() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+    }
 
     func bindUI() {
         toLeftButton.rx.tap.bind(to: viewModel.scrollToLeftButtonAction).disposed(by: disposeBag)
         toRightButton.rx.tap.bind(to: viewModel.scrollToRightButtonAction).disposed(by: disposeBag)
+
+        searchController.searchBar.rx.text.orEmpty
+        .throttle(0.3, scheduler: MainScheduler.instance).distinctUntilChanged()
+        .bind(to: viewModel.searchText).disposed(by: disposeBag)
     }
 
 }

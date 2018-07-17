@@ -19,6 +19,8 @@ class FeedViewModel: ViewModelProtocol {
 
     let scrollToRightButtonAction: AnyObserver<Void>
 
+    let searchText: AnyObserver<String?>
+
     // MARK: Public Properties
 
     var feedContentPageViewModel: FeedContentPageViewModel
@@ -30,13 +32,17 @@ class FeedViewModel: ViewModelProtocol {
     // MARK: Lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>) {
-        self.feedContentPageViewModel = FeedContentPageViewModel(provider: provider)
 
         let _scrollToLeftAction = PublishSubject<Void>()
         self.scrollToLeftButtonAction = _scrollToLeftAction.asObserver()
 
         let _scrollToRightAction = PublishSubject<Void>()
         self.scrollToRightButtonAction = _scrollToRightAction.asObserver()
+
+        let _searchText = PublishSubject<String?>()
+        self.searchText = _searchText.asObserver()
+
+        self.feedContentPageViewModel = FeedContentPageViewModel(provider: provider, search: _searchText.asObservable())
 
         //Business Logic
 
