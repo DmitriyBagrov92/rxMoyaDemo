@@ -31,6 +31,7 @@ class FeedContentPageViewController: UIPageViewController, ViewControllerProtoco
         super.viewDidLoad()
 
         dataSource = self
+        delegate = self
 
         bindUI()
     }
@@ -48,7 +49,16 @@ extension FeedContentPageViewController: UIPageViewControllerDataSource {
         let currentIndex = contentViewController.index(of: viewController) ?? 0
         return contentViewController[safe: currentIndex - 1]
     }
-    
+
+}
+
+extension FeedContentPageViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            viewModel.changeActiveViewController.onNext(previousViewControllers.last!)
+        }
+    }
+
 }
 
 private extension FeedContentPageViewController {
@@ -57,6 +67,11 @@ private extension FeedContentPageViewController {
         viewModel.viewControllers.drive(onNext: { [weak self] (viewControllers) in
             self?.contentViewController = viewControllers
             self?.setViewControllers([viewControllers.first!], direction: .forward, animated: false, completion: nil)
+            self?.viewModel.changeActiveViewController.onNext(viewControllers.first!)
+        }).disposed(by: disposeBag)
+
+        viewModel.updateActiveViewController.drive(onNext: { [weak self] (viewController) in
+            self?.setViewControllers([viewController], direction: .forward, animated: true, completion: nil)
         }).disposed(by: disposeBag)
     }
 

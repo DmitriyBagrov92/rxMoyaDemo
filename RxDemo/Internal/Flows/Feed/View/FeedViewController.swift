@@ -20,6 +20,10 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
 
     // MARK: IBOutlets - Views
 
+    @IBOutlet weak var toLeftButton: UIButton!
+
+    @IBOutlet weak var toRightButton: UIButton!
+    
     // MARK: Private Properties
 
     private let disposeBag = DisposeBag()
@@ -45,6 +49,8 @@ class FeedViewController: UIViewController, ViewControllerProtocol, Identifierab
 private extension FeedViewController {
 
     func bindUI() {
+        toLeftButton.rx.tap.bind(to: viewModel.scrollToLeftButtonAction).disposed(by: disposeBag)
+        toRightButton.rx.tap.bind(to: viewModel.scrollToRightButtonAction).disposed(by: disposeBag)
     }
 
 }

@@ -70,6 +70,10 @@
                         <viewLayoutGuide key="safeArea" id="ME2-Px-B5m"/>
                     </view>
                     <navigationItem key="navigationItem" title="OlimpBattle" id="ofP-gr-xpk"/>
+                    <connections>
+                        <outlet property="toLeftButton" destination="j4U-BC-mTw" id="lI6-dW-5X7"/>
+                        <outlet property="toRightButton" destination="g4X-ER-gG8" id="srh-SV-Mtg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIt-DG-E4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
