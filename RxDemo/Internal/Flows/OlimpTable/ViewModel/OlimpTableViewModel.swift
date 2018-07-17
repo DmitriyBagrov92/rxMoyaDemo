@@ -49,7 +49,11 @@ class OlimpTableViewModel: ViewModelProtocol {
 
     let tableWillDisplayRow: AnyObserver<IndexPath>
 
+    let tableRequireRefresh: AnyObserver<Void>
+
     // MARK: Public Properties: Output
+
+    let tableIsRefreshing: Driver<Bool>
 
     let tableSections: Driver<[OlimpItemsSection]>
 
@@ -60,6 +64,12 @@ class OlimpTableViewModel: ViewModelProtocol {
     // MARK: lyfecircle
 
     init(provider: MoyaProvider<OlimpBattle>, type: OlimpTableType) {
+        let _refreshData = PublishSubject<Void>()
+        self.tableRequireRefresh = _refreshData.asObserver()
+
+        let _tableRefreshing = PublishSubject<Bool>()
+        self.tableIsRefreshing = _tableRefreshing.asDriver(onErrorJustReturn: false)
+
         let _lastTableRow = PublishSubject<IndexPath>()
         self.tableWillDisplayRow = _lastTableRow.asObserver()
 
@@ -72,9 +82,14 @@ class OlimpTableViewModel: ViewModelProtocol {
         }).asDriver(onErrorJustReturn: [])
 
         //Business Logic
+        //Network Data Request logic
 
-        page.flatMapLatest({ provider.rx.request(type.requestType(with: $0)).map([OlimpBattleItem].self) }).map({ try! olimpItems.value() + $0 }).bind(to: olimpItems).disposed(by: disposeBag)
+        let requestNextPage = page.flatMapLatest({ provider.rx.request(type.requestType(with: $0)).map([OlimpBattleItem].self) })
 
+        requestNextPage.map({ try! olimpItems.value() + $0 }).bind(to: olimpItems).disposed(by: disposeBag)
+        requestNextPage.map({ _ in return false }).bind(to: _tableRefreshing).disposed(by: disposeBag)
+
+        //Pagination logic
         _lastTableRow.filter({ (ip) -> Bool in
             let items = try? olimpItems.value()
             return (items?.count ?? Int.max) - 1 == ip.row
@@ -86,6 +101,9 @@ class OlimpTableViewModel: ViewModelProtocol {
         .bind(to: page)
         .disposed(by: disposeBag)
 
+        //Refresh table logic
+        _refreshData.map({ [] }).bind(to: olimpItems).disposed(by: disposeBag)
+        _refreshData.map({ _ in return FeedPage() }).bind(to: page).disposed(by: disposeBag)
 
     }
 

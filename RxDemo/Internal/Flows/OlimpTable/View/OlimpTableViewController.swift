@@ -23,15 +23,18 @@ class OlimpTableViewController: UIViewController, ViewControllerProtocol, Identi
     
     var viewModel: OlimpTableViewModel!
     
-    // MARK: Public Properties
+    // MARK: Private Properties
     
     private let disposeBag = DisposeBag()
+
+    private let refreshControl = UIRefreshControl()
     
     // MARK - ViewController Lyfecircle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         bindUI()
     }
     
@@ -46,6 +49,10 @@ extension OlimpTableViewController: UITableViewDelegate {
 }
 
 private extension OlimpTableViewController {
+
+    func setupUI() {
+        tableView.refreshControl = refreshControl
+    }
     
     func bindUI() {
         let dataSource = RxTableViewSectionedReloadDataSource<OlimpItemsSection>(configureCell: { (ds, tv, ip, item) -> UITableViewCell in
@@ -63,5 +70,8 @@ private extension OlimpTableViewController {
         })
         
         viewModel.tableSections.drive(self.tableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+
+        refreshControl.rx.controlEvent(.valueChanged).bind(to: viewModel.tableRequireRefresh).disposed(by: disposeBag)
+        viewModel.tableIsRefreshing.drive(refreshControl.rx.isRefreshing).disposed(by: disposeBag)
     }
 }
